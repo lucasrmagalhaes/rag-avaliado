@@ -10,7 +10,7 @@ Um RAG que só "responde" não basta quando o sistema precisa de avaliação, bu
 
 1. a resposta aponta o artigo de onde saiu;
 2. dá para comparar busca vetorial, busca híbrida e híbrida com reranker;
-3. um pull request que piora a recuperação quebra a verificação, sem depender de uma chave paga.
+3. um pull request que piora a recuperação léxica quebra a verificação, sem depender de uma chave paga. O gate não percebe uma regressão só do lado vetorial (ver [Limites desta avaliação](#limites-desta-avaliação)).
 
 ## Arquitetura
 
@@ -28,12 +28,12 @@ flowchart LR
   eval[Avaliacao no CI] --> grafo
 ```
 
-O grafo tem dois nós: `retrieve` e `generate`. O modo escolhe o primeiro nó.
+O grafo tem dois nós em linha, `retrieve` e `generate`, sem aresta condicional nem recusa. O modo escolhe como o primeiro nó busca.
 
 | Modo | O que faz |
 | --- | --- |
 | `vector` | Similaridade de cosseno no pgvector |
-| `hybrid` | Vetor e BM25 (Okapi), fundidos por Reciprocal Rank Fusion (k = 60), com um prior léxico para o RRF não apagar uma liderança clara do BM25 |
+| `hybrid` | Vetor e BM25 (Okapi), fundidos por Reciprocal Rank Fusion (k = 60). Depois entra um prior léxico de até 0,05. Como o RRF vale no máximo 2/61 (cerca de 0,033), o prior decide a ordem, e o resultado fica muito perto do BM25 sozinho |
 | `hybrid_rerank` | O conjunto híbrido passa por um reranker lexical (cobertura dos termos, número do artigo e nome da lei) |
 
 O índice GIN em português (`tsvector`) entra quando o corpus passa de 5 mil trechos: ele escolhe os candidatos e o BM25 reordena. Neste corpus a varredura completa cabe em memória.
@@ -46,7 +46,9 @@ LLM, por `LLM_PROVIDER`:
 - `openai`: API de chat. Sem `OPENAI_API_KEY`, cai no mock e a resposta marca `fallback_mock`.
 - `gemini`: API Gemini. Sem `GEMINI_API_KEY`, o mesmo fallback.
 
-Langfuse só envia trace se `LANGFUSE_PUBLIC_KEY` e `LANGFUSE_SECRET_KEY` existirem. Falha de rede não derruba a resposta.
+Segundo a documentação dos provedores em 20/11/2026, o modelo padrão `gemini-2.0-flash` aparece como desligado, e o `gpt-4o-mini` está depreciado. Troque `GEMINI_MODEL` ou `OPENAI_MODEL` antes de usar chave.
+
+Langfuse só envia trace se `LANGFUSE_PUBLIC_KEY` e `LANGFUSE_SECRET_KEY` existirem. Falha de rede não derruba a resposta. A integração usa a ingestão legada, que o Langfuse Cloud deixou de aceitar em 16/11/2026, segundo a documentação. Ela também trata a resposta 207 como sucesso, então a falha não aparece.
 
 ## Corpus
 
@@ -93,6 +95,8 @@ curl -s http://127.0.0.1:8000/perguntar \
 
 A resposta traz `citacoes` com lei, artigo, trecho e URL. `provedor_llm` diz qual modelo gerou o texto. `fallback_mock` fica verdadeiro quando o provedor pedido não tem chave.
 
+As citações são os cinco trechos recuperados, não só os que sustentam a resposta, e nada confere se os `[n]` do texto existem. Como o grafo não tem recusa, uma pergunta fora do corpus também volta com resposta e cinco citações.
+
 Avaliação e testes:
 
 ```bash
@@ -123,7 +127,7 @@ Definições:
 
 - **Hit@5 e recall@5**: o artigo esperado aparece entre os 5 trechos recuperados. Cada pergunta tem um artigo esperado, então os dois coincidem neste conjunto.
 - **MRR**: 1 dividido pela posição do primeiro trecho do artigo certo.
-- **Fidelidade**: média, por frase da resposta, da fração dos termos da frase que também estão no contexto recuperado.
+- **Fidelidade**: média, por frase da resposta, da fração dos termos da frase que também estão no contexto recuperado. O marcador de citação no fim da resposta ("[3]") conta como uma frase sem termos. Por isso uma resposta copiada do contexto, com n frases, tira n/(n+1). Os 0,750 da tabela são esse efeito com três frases, não uma medida de fidelidade.
 - **Relevância**: F1 de termos entre a resposta e a resposta esperada do gabarito.
 
 | Modo | Hit@5 | Recall@5 | MRR | Fidelidade | Relevância | p50 | p95 |
@@ -135,7 +139,7 @@ Definições:
 
 A linha do LLM pago está vazia de propósito: esta execução não usou chave de Gemini, OpenAI nem Langfuse.
 
-O que a medição mostra: a fusão híbrida recuperou o artigo certo em 47 de 50 perguntas. A busca só vetorial ficou em 36 de 50. O reranker lexical não melhorou o hit@5 (44 de 50). O padrão da API continua `hybrid`. A relevância lexical fica em torno de 0,31 porque o mock cita o texto da lei e o gabarito é uma frase curta.
+O que a medição mostra: a fusão híbrida recuperou o artigo certo em 47 de 50 perguntas. A busca só vetorial ficou em 36 de 50. O BM25 sozinho, rodando o mesmo código, acerta 45 de 50 (MRR 0,820), e a fusão acrescenta duas perguntas, q27 e q45. Com o lado vetorial trocado por vetores aleatórios, o híbrido continua em 45 de 50. O reranker lexical não melhorou o hit@5 (44 de 50). O padrão da API continua `hybrid`. A relevância lexical fica em torno de 0,31 porque o mock cita o texto da lei e o gabarito é uma frase curta.
 
 Três perguntas ainda falham no híbrido: a definição de consentimento (art. 5º da LGPD, ofuscada pelos arts. 7º, 8º e 9º), o consentimento para dado sensível (art. 11) e a definição de fornecedor no CDC (art. 3º). São termos que se repetem em muitos artigos.
 
@@ -148,6 +152,12 @@ Na comparação inteira (50 perguntas x 3 modos) o sistema montou 459.045 caract
 A latência é do pipeline local já com o modelo ONNX carregado: embedding da pergunta, busca e extrator. p50 do modo híbrido: 56,9 ms. p95: 62,3 ms. O aquecimento de uma consulta, depois do modelo construído, levou 6,1 ms. Não há medição de cold start no Cloud Run.
 
 O piso do CI, no modo híbrido, é hit@5 e recall@5 de 0,86 e fidelidade de 0,68. Está abaixo desta execução para pegar regressão sem quebrar por oscilação de uma pergunta.
+
+### Limites desta avaliação
+
+- **O gate só olha o modo `hybrid`.** Com embeddings aleatórios no lado vetorial, o híbrido ainda passa do piso, então o gate pega regressão léxica, não vetorial. O `tests/test_report_gate.py` só relê o JSON versionado e não roda o pipeline.
+- **As perguntas favorecem a busca léxica.** As 50 perguntas foram escritas no vocabulário da lei: todas citam a lei pelo nome, e 14 citam o número do artigo. Não há conjunto separado para escolher o prior, os pesos e o piso.
+- **As métricas são lexicais**, mesmo quando lembram os nomes do RAGAS.
 
 ## Deploy
 
@@ -178,7 +188,7 @@ O workflow `.github/workflows/deploy-cloud-run.yml` faz o mesmo deploy manual (`
 
 Para Gemini ou OpenAI em produção, troque `LLM_PROVIDER` e guarde a chave no Secret Manager. Não coloque a chave no repositório.
 
-A API não tem autenticação. Não deixe uma URL pública sem uma proteção na frente.
+A API não tem autenticação nem limite de taxa. O comando acima e o workflow usam `--allow-unauthenticated`, que deixa a URL pública. Troque por `--no-allow-unauthenticated` ou ponha uma proteção na frente antes de publicar.
 
 ## Testes e CI
 
@@ -188,6 +198,9 @@ O workflow `.github/workflows/ci.yml` sobe `pgvector/pgvector:pg16`, roda os tes
 
 ## Próximos passos
 
+- Publicar a linha do BM25 sozinho e montar um conjunto de perguntas escrito sem o vocabulário da lei.
+- Tirar o marcador de citação da conta de fidelidade, ou trocar a métrica por um juiz.
+- Recusar pergunta fora do corpus e citar só os trechos usados na resposta.
 - Preencher a linha do LLM pago com Gemini ou OpenAI e, se quiser, um juiz no estilo RAGAS.
 - Ligar o Langfuse com as chaves do projeto.
 - Publicar no Cloud Run com Supabase ou Cloud SQL.
