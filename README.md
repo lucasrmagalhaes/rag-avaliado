@@ -1,12 +1,12 @@
 # RAG Avaliado
 
-Portfólio de Lucas para vagas de engenheiro de IA no Brasil. O sistema responde perguntas sobre normas públicas com a citação do trecho usado e mede se essa qualidade se mantém quando o código muda.
+Responde perguntas sobre normas públicas brasileiras com a citação do trecho usado e mede se essa qualidade se mantém quando o código muda.
 
 O corpus é a **publicação original** da Câmara dos Deputados, não o texto consolidado vigente. A CLT aqui é a de 1943: o adicional da hora suplementar nesse arquivo é de 20%. A Constituição de 1988, no mesmo corpus, fala em 50% para o serviço extraordinário. A resposta cita a edição. Não use o projeto como consulta jurídica.
 
 ## Problema
 
-Um RAG que só "responde" não serve para uma vaga que pede avaliação, busca híbrida e rastreio. O recrutador precisa ver três coisas no mesmo repositório:
+Um RAG que só "responde" não basta quando o sistema precisa de avaliação, busca híbrida e rastreio. Este repositório junta três coisas:
 
 1. a resposta aponta o artigo de onde saiu;
 2. dá para comparar busca vetorial, busca híbrida e híbrida com reranker;
@@ -108,7 +108,7 @@ Para um LLM pago:
 LLM_PROVIDER=gemini GEMINI_API_KEY=... .venv/bin/python scripts/evaluate.py
 ```
 
-O juiz desta versão é lexical. Ele não é uma nota de RAGAS nem de DeepEval. Com chave, o texto gerado muda. Rode de novo e substitua a coluna vazia da tabela. Não copie número de outra execução.
+O juiz desta versão é lexical. Ele não é uma nota de RAGAS nem de DeepEval. Com chave, o texto gerado muda. Rode de novo e preencha a linha vazia da tabela com o resultado dessa execução.
 
 ## Métricas desta execução
 
@@ -133,9 +133,9 @@ Definições:
 | Híbrida + reranker | 0,880 | 0,880 | 0,807 | 0,750 | 0,284 | 52,7 ms | 81,0 ms |
 | Híbrida com LLM pago | preencher | preencher | preencher | preencher | preencher | preencher | preencher |
 
-A coluna do LLM pago está vazia de propósito. Esta máquina não tinha chave de Gemini, OpenAI ou Langfuse. Inventar essa coluna estragaria o portfólio.
+A linha do LLM pago está vazia de propósito: esta execução não usou chave de Gemini, OpenAI nem Langfuse.
 
-Leitura honesta do que foi medido: a fusão híbrida recuperou o artigo certo em 47 de 50 perguntas. A busca só vetorial ficou em 36 de 50. O reranker lexical não melhorou o hit@5 (44 de 50). O padrão da API continua `hybrid`. A relevância lexical fica em torno de 0,31 porque o mock cita o texto da lei e o gabarito é uma frase curta, não porque o número tenha sido ajustado à mão.
+O que a medição mostra: a fusão híbrida recuperou o artigo certo em 47 de 50 perguntas. A busca só vetorial ficou em 36 de 50. O reranker lexical não melhorou o hit@5 (44 de 50). O padrão da API continua `hybrid`. A relevância lexical fica em torno de 0,31 porque o mock cita o texto da lei e o gabarito é uma frase curta.
 
 Três perguntas ainda falham no híbrido: a definição de consentimento (art. 5º da LGPD, ofuscada pelos arts. 7º, 8º e 9º), o consentimento para dado sensível (art. 11) e a definição de fornecedor no CDC (art. 3º). São termos que se repetem em muitos artigos.
 
@@ -174,7 +174,7 @@ gcloud run deploy rag-avaliado \
   --set-secrets DATABASE_URL=rag-database-url:latest
 ```
 
-O workflow `.github/workflows/deploy-cloud-run.yml` faz o mesmo deploy manual (`workflow_dispatch`). Ele exige os segredos `GCP_SA_KEY` e `GCP_PROJECT`, e o segredo `rag-database-url` no Google Secret Manager. Sem isso o workflow não foi executado daqui.
+O workflow `.github/workflows/deploy-cloud-run.yml` faz o mesmo deploy manual (`workflow_dispatch`). Ele exige os segredos `GCP_SA_KEY` e `GCP_PROJECT`, e o segredo `rag-database-url` no Google Secret Manager. O workflow ainda não foi executado.
 
 Para Gemini ou OpenAI em produção, troque `LLM_PROVIDER` e guarde a chave no Secret Manager. Não coloque a chave no repositório.
 
