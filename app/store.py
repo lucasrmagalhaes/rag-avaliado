@@ -50,8 +50,21 @@ class PostgresStore:
             prepare_threshold=None,
             connect_timeout=10,
         )
+        self._ensure_vector_extension(connection)
         register_vector(connection)
         return connection
+
+    def _ensure_vector_extension(self, connection) -> None:
+        # register_vector consulta pg_type. A extensão precisa existir e estar
+        # confirmada nesta conexão antes dessa consulta, senão um banco recém
+        # criado (como o rag_test do CI) quebra com "vector type not found".
+        present = connection.execute(
+            "SELECT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'vector') AS present"
+        ).fetchone()
+        if present and present["present"]:
+            return
+        connection.execute("CREATE EXTENSION IF NOT EXISTS vector")
+        connection.commit()
 
     def migrate(self) -> None:
         statements = [item.strip() for item in SCHEMA.format(dim=self.settings.embedding_dim).split(";") if item.strip()]
