@@ -1,0 +1,8 @@
+{
+  "mode": "hybrid",
+  "k": 5,
+  "min_hit_rate_at_5": 0.86,
+  "min_recall_at_5": 0.86,
+  "min_faithfulness": 0.68,
+  "note": "Piso do modo híbrido na avaliação lexical, com embeddings locais e LLM mock. Os números medidos estão em reports/eval_latest.json. O piso fica abaixo da execução de referência para acusar regressão sem quebrar por variação mínima."
+}

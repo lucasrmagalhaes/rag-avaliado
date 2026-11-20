@@ -1,0 +1,352 @@
+[
+  {
+    "id": "q01",
+    "law": "LGPD",
+    "question": "Qual é o objetivo da LGPD no art. 1º?",
+    "expected_answer": "Proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural.",
+    "expected_articles": ["lgpd-art-1"]
+  },
+  {
+    "id": "q02",
+    "law": "LGPD",
+    "question": "O que a LGPD considera dado pessoal?",
+    "expected_answer": "Informação relacionada a pessoa natural identificada ou identificável.",
+    "expected_articles": ["lgpd-art-5"]
+  },
+  {
+    "id": "q03",
+    "law": "LGPD",
+    "question": "O que é dado pessoal sensível na LGPD?",
+    "expected_answer": "Dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, saúde, vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural.",
+    "expected_articles": ["lgpd-art-5"]
+  },
+  {
+    "id": "q04",
+    "law": "LGPD",
+    "question": "Quem é o titular segundo a definição da LGPD?",
+    "expected_answer": "Pessoa natural a quem se referem os dados pessoais que são objeto de tratamento.",
+    "expected_articles": ["lgpd-art-5"]
+  },
+  {
+    "id": "q05",
+    "law": "LGPD",
+    "question": "Quem é o encarregado na definição da LGPD?",
+    "expected_answer": "Pessoa natural, indicada pelo controlador, que atua como canal de comunicação entre o controlador, os titulares e a autoridade nacional.",
+    "expected_articles": ["lgpd-art-5"]
+  },
+  {
+    "id": "q06",
+    "law": "LGPD",
+    "question": "Como a LGPD define consentimento?",
+    "expected_answer": "Manifestação livre, informada e inequívoca pela qual o titular concorda com o tratamento de seus dados pessoais para uma finalidade determinada.",
+    "expected_articles": ["lgpd-art-5"]
+  },
+  {
+    "id": "q07",
+    "law": "LGPD",
+    "question": "O que o princípio da necessidade da LGPD exige no art. 6º?",
+    "expected_answer": "Limitação do tratamento ao mínimo necessário para a realização de suas finalidades, com dados pertinentes, proporcionais e não excessivos.",
+    "expected_articles": ["lgpd-art-6"]
+  },
+  {
+    "id": "q08",
+    "law": "LGPD",
+    "question": "O consentimento do titular é uma hipótese que autoriza o tratamento de dados pessoais na LGPD?",
+    "expected_answer": "Sim. O tratamento pode ser realizado mediante o fornecimento de consentimento pelo titular.",
+    "expected_articles": ["lgpd-art-7"]
+  },
+  {
+    "id": "q09",
+    "law": "LGPD",
+    "question": "Na LGPD, o que acontece com o consentimento dado por escrito e quem tem o ônus da prova?",
+    "expected_answer": "O consentimento por escrito deve constar de cláusula destacada, e cabe ao controlador o ônus da prova de que foi obtido em conformidade com a lei.",
+    "expected_articles": ["lgpd-art-8"]
+  },
+  {
+    "id": "q10",
+    "law": "LGPD",
+    "question": "Quando o tratamento se baseia no legítimo interesse do controlador, quais dados a LGPD permite tratar?",
+    "expected_answer": "Somente os dados pessoais estritamente necessários para a finalidade pretendida.",
+    "expected_articles": ["lgpd-art-10"]
+  },
+  {
+    "id": "q11",
+    "law": "LGPD",
+    "question": "Como deve ser o consentimento para tratar dado pessoal sensível na LGPD?",
+    "expected_answer": "O titular ou seu responsável legal deve consentir de forma específica e destacada, para finalidades específicas.",
+    "expected_articles": ["lgpd-art-11"]
+  },
+  {
+    "id": "q12",
+    "law": "LGPD",
+    "question": "Quem deve consentir o tratamento de dados pessoais de crianças na LGPD?",
+    "expected_answer": "Pelo menos um dos pais ou o responsável legal, com consentimento específico e em destaque, no melhor interesse da criança.",
+    "expected_articles": ["lgpd-art-14"]
+  },
+  {
+    "id": "q13",
+    "law": "LGPD",
+    "question": "A LGPD garante ao titular a portabilidade e a eliminação dos dados?",
+    "expected_answer": "O titular pode pedir portabilidade dos dados a outro fornecedor e a eliminação dos dados pessoais tratados com o seu consentimento, com as exceções da lei.",
+    "expected_articles": ["lgpd-art-18"]
+  },
+  {
+    "id": "q14",
+    "law": "LGPD",
+    "question": "O titular pode pedir revisão humana de uma decisão automatizada na LGPD?",
+    "expected_answer": "Sim. O titular pode solicitar revisão, por pessoa natural, de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses.",
+    "expected_articles": ["lgpd-art-20"]
+  },
+  {
+    "id": "q15",
+    "law": "LGPD",
+    "question": "Para quais países a LGPD permite transferência internacional de dados pessoais?",
+    "expected_answer": "Para países ou organismos internacionais que proporcionem grau de proteção de dados pessoais adequado ao previsto na lei, entre outras hipóteses.",
+    "expected_articles": ["lgpd-art-33"]
+  },
+  {
+    "id": "q16",
+    "law": "LGPD",
+    "question": "Que tipo de medida de segurança os agentes de tratamento devem adotar na LGPD?",
+    "expected_answer": "Medidas de segurança, técnicas e administrativas, aptas a proteger os dados pessoais de acessos não autorizados e de destruição, perda, alteração ou tratamento inadequado.",
+    "expected_articles": ["lgpd-art-46"]
+  },
+  {
+    "id": "q17",
+    "law": "LGPD",
+    "question": "A quem o controlador deve comunicar um incidente de segurança na LGPD?",
+    "expected_answer": "À autoridade nacional e ao titular, quando o incidente puder acarretar risco ou dano relevante aos titulares.",
+    "expected_articles": ["lgpd-art-48"]
+  },
+  {
+    "id": "q18",
+    "law": "LGPD",
+    "question": "Qual é o teto da multa simples prevista no art. 52 da LGPD deste corpus?",
+    "expected_answer": "Multa simples de até 2% do faturamento da pessoa jurídica de direito privado, limitada a 50 milhões de reais por infração.",
+    "expected_articles": ["lgpd-art-52"]
+  },
+  {
+    "id": "q19",
+    "law": "Marco Civil da Internet",
+    "question": "A neutralidade de rede é um princípio do Marco Civil da Internet?",
+    "expected_answer": "Sim. A preservação e a garantia da neutralidade de rede estão entre os princípios da disciplina do uso da internet no Brasil.",
+    "expected_articles": ["mci-art-3"]
+  },
+  {
+    "id": "q20",
+    "law": "Marco Civil da Internet",
+    "question": "No Marco Civil, o fluxo das comunicações do usuário pela internet pode ser quebrado sem ordem judicial?",
+    "expected_answer": "Não. A inviolabilidade e o sigilo do fluxo das comunicações pela internet só cedem por ordem judicial, na forma da lei.",
+    "expected_articles": ["mci-art-7"]
+  },
+  {
+    "id": "q21",
+    "law": "Marco Civil da Internet",
+    "question": "Como o responsável pela transmissão deve tratar os pacotes de dados no Marco Civil?",
+    "expected_answer": "Deve tratar de forma isonômica quaisquer pacotes de dados, sem distinção por conteúdo, origem e destino, serviço, terminal ou aplicação.",
+    "expected_articles": ["mci-art-9"]
+  },
+  {
+    "id": "q22",
+    "law": "Marco Civil da Internet",
+    "question": "O provedor pode entregar registros de conexão do Marco Civil sem ordem judicial?",
+    "expected_answer": "Não. A disponibilização dos registros, de forma autônoma ou associados a dados pessoais, depende de ordem judicial.",
+    "expected_articles": ["mci-art-10"]
+  },
+  {
+    "id": "q23",
+    "law": "Marco Civil da Internet",
+    "question": "Por quanto tempo o Marco Civil manda guardar os registros de conexão à internet?",
+    "expected_answer": "Pelo prazo de 1 ano, sob sigilo, em ambiente controlado e de segurança.",
+    "expected_articles": ["mci-art-13"]
+  },
+  {
+    "id": "q24",
+    "law": "Marco Civil da Internet",
+    "question": "Qual é o prazo de guarda dos registros de acesso a aplicações de internet no Marco Civil?",
+    "expected_answer": "Seis meses, sob sigilo, em ambiente controlado e de segurança, para o provedor de aplicações que exerça a atividade de forma organizada, profissional e com fins econômicos.",
+    "expected_articles": ["mci-art-15"]
+  },
+  {
+    "id": "q25",
+    "law": "Marco Civil da Internet",
+    "question": "Quando o provedor de aplicações pode ser responsabilizado por conteúdo de terceiro no art. 19 do Marco Civil?",
+    "expected_answer": "Se, após ordem judicial específica, não tornar indisponível o conteúdo apontado como infringente, no prazo assinalado e nos limites técnicos do serviço.",
+    "expected_articles": ["mci-art-19"]
+  },
+  {
+    "id": "q26",
+    "law": "Marco Civil da Internet",
+    "question": "O Marco Civil alcança provedor sediado no exterior que ofereça serviço ao público brasileiro?",
+    "expected_answer": "Sim. A lei brasileira se aplica mesmo que as atividades sejam realizadas por pessoa jurídica sediada no exterior, se ela ofertar serviço ao público brasileiro.",
+    "expected_articles": ["mci-art-11"]
+  },
+  {
+    "id": "q27",
+    "law": "CDC",
+    "question": "Quem é consumidor no Código de Defesa do Consumidor?",
+    "expected_answer": "Toda pessoa física ou jurídica que adquire ou utiliza produto ou serviço como destinatário final.",
+    "expected_articles": ["cdc-art-2"]
+  },
+  {
+    "id": "q28",
+    "law": "CDC",
+    "question": "Quem é fornecedor segundo o Código de Defesa do Consumidor?",
+    "expected_answer": "Toda pessoa física ou jurídica, pública ou privada, nacional ou estrangeira, e os entes despersonalizados, que desenvolvem atividade de produção, montagem, criação, construção, transformação, importação, exportação, distribuição ou comercialização de produtos ou prestação de serviços.",
+    "expected_articles": ["cdc-art-3"]
+  },
+  {
+    "id": "q29",
+    "law": "CDC",
+    "question": "O Código de Defesa do Consumidor garante informação clara sobre preço e riscos?",
+    "expected_answer": "Sim. É direito básico a informação adequada e clara sobre produtos e serviços, inclusive quantidade, características, composição, qualidade, preço e riscos.",
+    "expected_articles": ["cdc-art-6"]
+  },
+  {
+    "id": "q30",
+    "law": "CDC",
+    "question": "A responsabilidade do fabricante por defeito do produto no CDC depende de culpa?",
+    "expected_answer": "Não. O fabricante, o produtor, o construtor e o importador respondem independentemente da existência de culpa pelos danos causados por defeitos do produto.",
+    "expected_articles": ["cdc-art-12"]
+  },
+  {
+    "id": "q31",
+    "law": "CDC",
+    "question": "Se o vício do produto não for sanado em trinta dias, o que o consumidor pode exigir no CDC?",
+    "expected_answer": "A substituição do produto, a restituição da quantia paga ou o abatimento proporcional do preço.",
+    "expected_articles": ["cdc-art-18"]
+  },
+  {
+    "id": "q32",
+    "law": "CDC",
+    "question": "Quais são os prazos decadenciais do art. 26 do CDC para vícios aparentes?",
+    "expected_answer": "Trinta dias para produtos ou serviços não duráveis e noventa dias para produtos ou serviços duráveis.",
+    "expected_articles": ["cdc-art-26"]
+  },
+  {
+    "id": "q33",
+    "law": "CDC",
+    "question": "O que é publicidade enganosa no Código de Defesa do Consumidor?",
+    "expected_answer": "Informação ou comunicação publicitária, inteira ou parcialmente falsa, ou que por omissão seja capaz de induzir em erro o consumidor sobre natureza, características, qualidade, quantidade, propriedades, origem ou preço.",
+    "expected_articles": ["cdc-art-37"]
+  },
+  {
+    "id": "q34",
+    "law": "CDC",
+    "question": "O CDC permite condicionar a venda de um produto à compra de outro?",
+    "expected_answer": "Não. É vedado condicionar o fornecimento de produto ou de serviço ao fornecimento de outro produto ou serviço.",
+    "expected_articles": ["cdc-art-39"]
+  },
+  {
+    "id": "q35",
+    "law": "CDC",
+    "question": "Qual é a consequência de cobrar quantia indevida do consumidor no art. 42 do CDC?",
+    "expected_answer": "O consumidor tem direito à repetição do indébito pelo dobro do que pagou em excesso, com correção monetária e juros, salvo engano justificável.",
+    "expected_articles": ["cdc-art-42"]
+  },
+  {
+    "id": "q36",
+    "law": "CDC",
+    "question": "Qual é o prazo de arrependimento do CDC quando a compra ocorre fora do estabelecimento comercial?",
+    "expected_answer": "Sete dias, a contar da assinatura ou do recebimento do produto ou serviço, com devolução imediata dos valores pagos.",
+    "expected_articles": ["cdc-art-49"]
+  },
+  {
+    "id": "q37",
+    "law": "Constituição",
+    "question": "O que o caput do art. 5º da Constituição de 1988 deste corpus garante?",
+    "expected_answer": "A igualdade perante a lei e a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.",
+    "expected_articles": ["cf-art-5"]
+  },
+  {
+    "id": "q38",
+    "law": "Constituição",
+    "question": "O art. 5º da Constituição de 1988 deste corpus protege a intimidade e a vida privada?",
+    "expected_answer": "Sim. São invioláveis a intimidade, a vida privada, a honra e a imagem das pessoas, com indenização pelo dano material ou moral decorrente da violação.",
+    "expected_articles": ["cf-art-5"]
+  },
+  {
+    "id": "q39",
+    "law": "Constituição",
+    "question": "Para que serve o habeas data no art. 5º da Constituição de 1988 deste corpus?",
+    "expected_answer": "Para assegurar o conhecimento de informações relativas à pessoa do impetrante, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público, e para a retificação desses dados.",
+    "expected_articles": ["cf-art-5"]
+  },
+  {
+    "id": "q40",
+    "law": "Constituição",
+    "question": "Quais direitos sociais o art. 6º da Constituição de 1988 deste corpus lista?",
+    "expected_answer": "Educação, saúde, trabalho, lazer, segurança, previdência social, proteção à maternidade e à infância, e assistência aos desamparados.",
+    "expected_articles": ["cf-art-6"]
+  },
+  {
+    "id": "q41",
+    "law": "Constituição",
+    "question": "O art. 7º da Constituição de 1988 deste corpus inclui o fundo de garantia do tempo de serviço?",
+    "expected_answer": "Sim. O fundo de garantia do tempo de serviço está entre os direitos dos trabalhadores urbanos e rurais.",
+    "expected_articles": ["cf-art-7"]
+  },
+  {
+    "id": "q42",
+    "law": "Constituição",
+    "question": "Qual é a duração do trabalho normal no art. 7º da Constituição de 1988 deste corpus?",
+    "expected_answer": "Não superior a oito horas diárias e quarenta e quatro semanais, facultada a compensação de horários e a redução da jornada.",
+    "expected_articles": ["cf-art-7"]
+  },
+  {
+    "id": "q43",
+    "law": "Constituição",
+    "question": "Qual é o adicional mínimo do serviço extraordinário no art. 7º da Constituição de 1988 deste corpus?",
+    "expected_answer": "Remuneração do serviço extraordinário superior, no mínimo, em cinquenta por cento à do normal.",
+    "expected_articles": ["cf-art-7"]
+  },
+  {
+    "id": "q44",
+    "law": "Constituição",
+    "question": "O que o art. 7º da Constituição de 1988 deste corpus diz sobre férias e licença da gestante?",
+    "expected_answer": "Férias anuais remuneradas com pelo menos um terço a mais do que o salário normal, e licença à gestante de cento e vinte dias, sem prejuízo do emprego e do salário.",
+    "expected_articles": ["cf-art-7"]
+  },
+  {
+    "id": "q45",
+    "law": "CLT",
+    "question": "Na publicação original da CLT de 1943, quem é empregado?",
+    "expected_answer": "Toda pessoa física que prestar serviços de natureza não eventual a empregador, sob a dependência deste e mediante salário.",
+    "expected_articles": ["clt-art-3"]
+  },
+  {
+    "id": "q46",
+    "law": "CLT",
+    "question": "Na publicação original da CLT de 1943, a duração normal do trabalho pode passar de oito horas diárias?",
+    "expected_answer": "Não excederá de oito horas diárias, desde que não seja fixado expressamente outro limite.",
+    "expected_articles": ["clt-art-58"]
+  },
+  {
+    "id": "q47",
+    "law": "CLT",
+    "question": "Na publicação original da CLT de 1943, qual é o adicional mínimo da hora suplementar?",
+    "expected_answer": "Pelo menos 20 por cento superior à hora normal, e o número de horas suplementares não excede duas.",
+    "expected_articles": ["clt-art-59"]
+  },
+  {
+    "id": "q48",
+    "law": "CLT",
+    "question": "Na publicação original da CLT de 1943, qual é o intervalo mínimo quando o trabalho contínuo excede seis horas?",
+    "expected_answer": "Um intervalo para repouso ou alimentação de no mínimo uma hora.",
+    "expected_articles": ["clt-art-71"]
+  },
+  {
+    "id": "q49",
+    "law": "CLT",
+    "question": "Na publicação original da CLT de 1943, ato de improbidade é justa causa?",
+    "expected_answer": "Sim. Ato de improbidade constitui justa causa para rescisão do contrato de trabalho pelo empregador.",
+    "expected_articles": ["clt-art-482"]
+  },
+  {
+    "id": "q50",
+    "law": "CLT",
+    "question": "Na publicação original da CLT de 1943, qual é o aviso prévio mínimo quando o salário é pago por semana?",
+    "expected_answer": "Oito dias, se o pagamento for efetuado por semana ou tempo inferior.",
+    "expected_articles": ["clt-art-487"]
+  }
+]

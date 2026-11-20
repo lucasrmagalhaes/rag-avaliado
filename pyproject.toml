@@ -1,0 +1,26 @@
+[project]
+name = "rag-avaliado"
+version = "0.1.0"
+description = "Perguntas e respostas com citação e avaliação sobre normas públicas brasileiras"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi==0.165.0",
+  "uvicorn==0.54.0",
+  "pydantic==2.14.4",
+  "pydantic-settings==2.16.3",
+  "langgraph==1.2.24",
+  "langchain-core==1.8.4",
+  "psycopg[binary]==3.3.9",
+  "pgvector==0.5.1",
+  "fastembed==0.9.1",
+  "httpx==0.28.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

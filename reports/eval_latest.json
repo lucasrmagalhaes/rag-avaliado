@@ -1,0 +1,2612 @@
+{
+  "generated_at": "2026-11-20T02:36:55.769133+00:00",
+  "python": "3.12.3",
+  "embedding_provider": "local",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "llm_provider": "mock",
+  "llm_effective": "mock",
+  "fallback_mock": false,
+  "judge": "lexical",
+  "judge_note": "Fidelidade e relevância foram calculadas por sobreposição de termos, sem LLM juiz. Isso permite repetir o número sem chave de API. Não é a nota de um juiz RAGAS ou DeepEval.",
+  "k": 5,
+  "n_questions": 50,
+  "n_chunks": 459,
+  "warmup_ms": 6.12,
+  "modes": {
+    "vector": {
+      "n": 50,
+      "hit_rate_at_5": 0.72,
+      "recall_at_5": 0.72,
+      "mrr": 0.5153333333333333,
+      "faithfulness": 0.7183333333333333,
+      "answer_relevancy": 0.2323635381652538,
+      "latency_ms_p50": 21.085609000010663,
+      "latency_ms_p95": 24.999472999979844
+    },
+    "hybrid": {
+      "n": 50,
+      "hit_rate_at_5": 0.94,
+      "recall_at_5": 0.94,
+      "mrr": 0.8540000000000001,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.3082413234858483,
+      "latency_ms_p50": 56.94033299982948,
+      "latency_ms_p95": 62.331600000106846
+    },
+    "hybrid_rerank": {
+      "n": 50,
+      "hit_rate_at_5": 0.88,
+      "recall_at_5": 0.88,
+      "mrr": 0.8066666666666668,
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.28411572090012266,
+      "latency_ms_p50": 52.74071000008007,
+      "latency_ms_p95": 81.01698199993734
+    }
+  },
+  "questions": {
+    "vector": [
+      {
+        "id": "q01",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.5,
+        "relevancy": 0.0,
+        "latency_ms": 24.999472999979844,
+        "retrieved": [
+          "cdc-art-106",
+          "lgpd-art-54",
+          "cdc-art-111",
+          "lgpd-art-55",
+          "lgpd-art-28"
+        ]
+      },
+      {
+        "id": "q02",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.5,
+        "relevancy": 0.06451612903225806,
+        "latency_ms": 22.046443000135696,
+        "retrieved": [
+          "lgpd-art-12",
+          "lgpd-art-11",
+          "lgpd-art-23",
+          "lgpd-art-10",
+          "lgpd-art-13"
+        ]
+      },
+      {
+        "id": "q03",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.5,
+        "relevancy": 0.0,
+        "latency_ms": 21.88686499994219,
+        "retrieved": [
+          "lgpd-art-12",
+          "lgpd-art-50",
+          "lgpd-art-11",
+          "lgpd-art-47",
+          "lgpd-art-48"
+        ]
+      },
+      {
+        "id": "q04",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.4186046511627907,
+        "latency_ms": 21.4082300001337,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-16",
+          "cdc-art-34",
+          "lgpd-art-41"
+        ]
+      },
+      {
+        "id": "q05",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.4,
+        "latency_ms": 21.872375000157263,
+        "retrieved": [
+          "lgpd-art-50",
+          "cdc-art-106",
+          "lgpd-art-5",
+          "lgpd-art-41",
+          "lgpd-art-54"
+        ]
+      },
+      {
+        "id": "q06",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.13114754098360654,
+        "latency_ms": 21.633794000081252,
+        "retrieved": [
+          "lgpd-art-7",
+          "lgpd-art-18",
+          "lgpd-art-9",
+          "lgpd-art-8",
+          "lgpd-art-8"
+        ]
+      },
+      {
+        "id": "q07",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.06666666666666667,
+        "latency_ms": 20.267394000029526,
+        "retrieved": [
+          "lgpd-art-35",
+          "lgpd-art-35",
+          "lgpd-art-46",
+          "mci-art-6",
+          "lgpd-art-50"
+        ]
+      },
+      {
+        "id": "q08",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.13333333333333333,
+        "latency_ms": 22.86160399989967,
+        "retrieved": [
+          "lgpd-art-9",
+          "lgpd-art-11",
+          "lgpd-art-18",
+          "lgpd-art-10",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q09",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.25,
+        "rank": 4,
+        "faithfulness": 0.75,
+        "relevancy": 0.5652173913043478,
+        "latency_ms": 24.65149299996483,
+        "retrieved": [
+          "lgpd-art-18",
+          "lgpd-art-9",
+          "lgpd-art-7",
+          "lgpd-art-8",
+          "lgpd-art-8"
+        ]
+      },
+      {
+        "id": "q10",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3111111111111111,
+        "latency_ms": 22.958968000011737,
+        "retrieved": [
+          "lgpd-art-10",
+          "lgpd-art-6",
+          "lgpd-art-9",
+          "lgpd-art-10",
+          "lgpd-art-43"
+        ]
+      },
+      {
+        "id": "q11",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.025974025974025972,
+        "latency_ms": 19.524914000157878,
+        "retrieved": [
+          "lgpd-art-7",
+          "lgpd-art-9",
+          "lgpd-art-18",
+          "lgpd-art-8",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q12",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.375,
+        "latency_ms": 21.8512589999591,
+        "retrieved": [
+          "lgpd-art-14",
+          "lgpd-art-14",
+          "lgpd-art-11",
+          "lgpd-art-43",
+          "lgpd-art-7"
+        ]
+      },
+      {
+        "id": "q13",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.36000000000000004,
+        "latency_ms": 22.54938500004755,
+        "retrieved": [
+          "lgpd-art-18",
+          "lgpd-art-18",
+          "lgpd-art-16",
+          "lgpd-art-37",
+          "lgpd-art-16"
+        ]
+      },
+      {
+        "id": "q14",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.32911392405063294,
+        "latency_ms": 19.202692000135357,
+        "retrieved": [
+          "lgpd-art-20",
+          "lgpd-art-20",
+          "lgpd-art-9",
+          "lgpd-art-18",
+          "lgpd-art-8"
+        ]
+      },
+      {
+        "id": "q15",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.38095238095238093,
+        "latency_ms": 21.002012999815634,
+        "retrieved": [
+          "lgpd-art-33",
+          "lgpd-art-5",
+          "lgpd-art-4",
+          "lgpd-art-5",
+          "lgpd-art-34"
+        ]
+      },
+      {
+        "id": "q16",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.37647058823529417,
+        "latency_ms": 21.877632000041558,
+        "retrieved": [
+          "lgpd-art-46",
+          "lgpd-art-47",
+          "lgpd-art-43",
+          "lgpd-art-53",
+          "lgpd-art-48"
+        ]
+      },
+      {
+        "id": "q17",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2727272727272727,
+        "latency_ms": 20.935983000072156,
+        "retrieved": [
+          "lgpd-art-48",
+          "lgpd-art-41",
+          "lgpd-art-42",
+          "lgpd-art-48",
+          "lgpd-art-7"
+        ]
+      },
+      {
+        "id": "q18",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.1714285714285714,
+        "latency_ms": 20.37267800005793,
+        "retrieved": [
+          "lgpd-art-52",
+          "cdc-art-57",
+          "lgpd-art-41",
+          "cdc-art-77",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q19",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.11764705882352941,
+        "latency_ms": 18.9678389999699,
+        "retrieved": [
+          "mci-art-7",
+          "mci-art-5",
+          "mci-art-18",
+          "mci-art-7",
+          "mci-art-14"
+        ]
+      },
+      {
+        "id": "q20",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "rank": 5,
+        "faithfulness": 0.75,
+        "relevancy": 0.11428571428571427,
+        "latency_ms": 21.759569999858286,
+        "retrieved": [
+          "mci-art-18",
+          "mci-art-14",
+          "mci-art-24",
+          "mci-art-25",
+          "mci-art-7"
+        ]
+      },
+      {
+        "id": "q21",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.41935483870967744,
+        "latency_ms": 21.085609000010663,
+        "retrieved": [
+          "mci-art-9",
+          "mci-art-24",
+          "mci-art-11",
+          "lgpd-art-18",
+          "lgpd-art-30"
+        ]
+      },
+      {
+        "id": "q22",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.20930232558139536,
+        "latency_ms": 20.75734300001386,
+        "retrieved": [
+          "mci-art-23",
+          "mci-art-10",
+          "mci-art-13",
+          "mci-art-22",
+          "mci-art-13"
+        ]
+      },
+      {
+        "id": "q23",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.3888888888888889,
+        "latency_ms": 38.92899800007399,
+        "retrieved": [
+          "mci-art-14",
+          "mci-art-13",
+          "mci-art-13",
+          "mci-art-15",
+          "mci-art-32"
+        ]
+      },
+      {
+        "id": "q24",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.044444444444444446,
+        "latency_ms": 19.865619000029255,
+        "retrieved": [
+          "mci-art-13",
+          "mci-art-14",
+          "mci-art-15",
+          "mci-art-32",
+          "mci-art-5"
+        ]
+      },
+      {
+        "id": "q25",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.02105263157894737,
+        "latency_ms": 19.909350000034465,
+        "retrieved": [
+          "cdc-art-101",
+          "mci-art-31",
+          "mci-art-19",
+          "cdc-art-14",
+          "cdc-art-56"
+        ]
+      },
+      {
+        "id": "q26",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3287671232876712,
+        "latency_ms": 18.369051000036052,
+        "retrieved": [
+          "mci-art-11",
+          "mci-art-8",
+          "cf-art-5",
+          "cdc-art-101",
+          "mci-art-24"
+        ]
+      },
+      {
+        "id": "q27",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5263157894736842,
+        "latency_ms": 15.894845000048008,
+        "retrieved": [
+          "cdc-art-2",
+          "cdc-art-106",
+          "cdc-art-29",
+          "cdc-art-51",
+          "cdc-art-34"
+        ]
+      },
+      {
+        "id": "q28",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.14814814814814814,
+        "latency_ms": 16.069560000005367,
+        "retrieved": [
+          "cdc-art-34",
+          "cdc-art-51",
+          "cdc-art-10",
+          "cdc-art-2",
+          "cdc-art-24"
+        ]
+      },
+      {
+        "id": "q29",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "rank": 5,
+        "faithfulness": 0.75,
+        "relevancy": 0.2696629213483146,
+        "latency_ms": 16.285519999883036,
+        "retrieved": [
+          "cdc-art-8",
+          "cdc-art-41",
+          "cdc-art-51",
+          "cdc-art-10",
+          "cdc-art-6"
+        ]
+      },
+      {
+        "id": "q30",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3076923076923077,
+        "latency_ms": 16.523753000001307,
+        "retrieved": [
+          "cdc-art-12",
+          "cdc-art-23",
+          "cdc-art-12",
+          "cdc-art-12",
+          "cdc-art-21"
+        ]
+      },
+      {
+        "id": "q31",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.06349206349206349,
+        "latency_ms": 18.2692789999237,
+        "retrieved": [
+          "cdc-art-18",
+          "cdc-art-18",
+          "cdc-art-26",
+          "cdc-art-18",
+          "cdc-art-27"
+        ]
+      },
+      {
+        "id": "q32",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "rank": 5,
+        "faithfulness": 0.75,
+        "relevancy": 0.3888888888888889,
+        "latency_ms": 18.692224000005808,
+        "retrieved": [
+          "cdc-art-27",
+          "cdc-art-116",
+          "lgpd-art-52",
+          "cdc-art-18",
+          "cdc-art-26"
+        ]
+      },
+      {
+        "id": "q33",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5373134328358209,
+        "latency_ms": 18.69327899999007,
+        "retrieved": [
+          "cdc-art-37",
+          "cdc-art-60",
+          "cdc-art-10",
+          "cdc-art-36",
+          "cdc-art-68"
+        ]
+      },
+      {
+        "id": "q34",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.18604651162790697,
+        "latency_ms": 21.742666999898574,
+        "retrieved": [
+          "cdc-art-8",
+          "cdc-art-41",
+          "cdc-art-10",
+          "cdc-art-35",
+          "cdc-art-51"
+        ]
+      },
+      {
+        "id": "q35",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.5,
+        "relevancy": 0.0,
+        "latency_ms": 21.55794899999819,
+        "retrieved": [
+          "cdc-art-17",
+          "cdc-art-11",
+          "cdc-art-106",
+          "cdc-art-29",
+          "cdc-art-4"
+        ]
+      },
+      {
+        "id": "q36",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.25806451612903225,
+        "latency_ms": 21.456889000091905,
+        "retrieved": [
+          "cdc-art-49",
+          "cdc-art-74",
+          "cdc-art-26",
+          "cdc-art-73",
+          "cdc-art-72"
+        ]
+      },
+      {
+        "id": "q37",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.025974025974025972,
+        "latency_ms": 21.61054999987755,
+        "retrieved": [
+          "cdc-art-113",
+          "cf-art-5",
+          "lgpd-art-35",
+          "cf-art-6",
+          "mci-art-19"
+        ]
+      },
+      {
+        "id": "q38",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.3500000000000001,
+        "latency_ms": 22.376053000016327,
+        "retrieved": [
+          "cdc-art-113",
+          "cf-art-5",
+          "cdc-art-111",
+          "mci-art-19",
+          "cdc-art-1"
+        ]
+      },
+      {
+        "id": "q39",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.0,
+        "latency_ms": 21.300923000126204,
+        "retrieved": [
+          "lgpd-art-60",
+          "cdc-art-113",
+          "cf-art-5",
+          "cdc-art-111",
+          "cf-art-6"
+        ]
+      },
+      {
+        "id": "q40",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.6,
+        "latency_ms": 20.86772600000586,
+        "retrieved": [
+          "cf-art-6",
+          "cdc-art-113",
+          "cdc-art-1",
+          "cdc-art-82",
+          "cdc-art-111"
+        ]
+      },
+      {
+        "id": "q41",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.5,
+        "relevancy": 0.0,
+        "latency_ms": 20.83119600001737,
+        "retrieved": [
+          "lgpd-art-60",
+          "cdc-art-18",
+          "lgpd-art-52",
+          "lgpd-art-41",
+          "cdc-art-116"
+        ]
+      },
+      {
+        "id": "q42",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.41935483870967744,
+        "latency_ms": 20.820047999905,
+        "retrieved": [
+          "cf-art-7",
+          "clt-art-71",
+          "clt-art-58",
+          "cf-art-7",
+          "cf-art-7"
+        ]
+      },
+      {
+        "id": "q43",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.20689655172413796,
+        "latency_ms": 22.37022400004207,
+        "retrieved": [
+          "cdc-art-113",
+          "cf-art-7",
+          "cf-art-5",
+          "cf-art-5",
+          "cdc-art-113"
+        ]
+      },
+      {
+        "id": "q44",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.0,
+        "latency_ms": 21.592233000092165,
+        "retrieved": [
+          "lgpd-art-11",
+          "cdc-art-111",
+          "cdc-art-113",
+          "cdc-art-1",
+          "lgpd-art-8"
+        ]
+      },
+      {
+        "id": "q45",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.25,
+        "rank": 4,
+        "faithfulness": 0.75,
+        "relevancy": 0.43750000000000006,
+        "latency_ms": 19.421511000018654,
+        "retrieved": [
+          "clt-art-442",
+          "clt-art-130",
+          "clt-art-129",
+          "clt-art-3",
+          "clt-art-477"
+        ]
+      },
+      {
+        "id": "q46",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.34920634920634924,
+        "latency_ms": 21.165913000004366,
+        "retrieved": [
+          "clt-art-58",
+          "clt-art-59",
+          "clt-art-71",
+          "clt-art-59",
+          "clt-art-130"
+        ]
+      },
+      {
+        "id": "q47",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.6666666666666666,
+        "relevancy": 0.27272727272727276,
+        "latency_ms": 26.767607000010685,
+        "retrieved": [
+          "clt-art-58",
+          "clt-art-130",
+          "clt-art-59",
+          "clt-art-59",
+          "clt-art-71"
+        ]
+      },
+      {
+        "id": "q48",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.1851851851851852,
+        "latency_ms": 21.52263200014204,
+        "retrieved": [
+          "clt-art-58",
+          "clt-art-71",
+          "clt-art-59",
+          "clt-art-59",
+          "clt-art-130"
+        ]
+      },
+      {
+        "id": "q49",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.5,
+        "relevancy": 0.0,
+        "latency_ms": 20.295983000096385,
+        "retrieved": [
+          "cdc-art-103",
+          "cdc-art-95",
+          "lgpd-art-48",
+          "cdc-art-38",
+          "cdc-art-104"
+        ]
+      },
+      {
+        "id": "q50",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.05970149253731343,
+        "latency_ms": 20.078570000123364,
+        "retrieved": [
+          "clt-art-487",
+          "clt-art-59",
+          "clt-art-129",
+          "clt-art-477",
+          "clt-art-58"
+        ]
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "q01",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.29411764705882354,
+        "latency_ms": 55.95792199983407,
+        "retrieved": [
+          "lgpd-art-1",
+          "lgpd-art-50",
+          "lgpd-art-23",
+          "lgpd-art-11",
+          "lgpd-art-12"
+        ]
+      },
+      {
+        "id": "q02",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2222222222222222,
+        "latency_ms": 43.67608500001552,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-20",
+          "lgpd-art-13"
+        ]
+      },
+      {
+        "id": "q03",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5671641791044776,
+        "latency_ms": 40.514840000014374,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-20"
+        ]
+      },
+      {
+        "id": "q04",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.32142857142857145,
+        "latency_ms": 42.580732000033095,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-41",
+          "lgpd-art-5",
+          "lgpd-art-39",
+          "lgpd-art-16"
+        ]
+      },
+      {
+        "id": "q05",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.4,
+        "latency_ms": 45.61986700014131,
+        "retrieved": [
+          "lgpd-art-41",
+          "lgpd-art-5",
+          "lgpd-art-41",
+          "lgpd-art-35",
+          "lgpd-art-40"
+        ]
+      },
+      {
+        "id": "q06",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.14285714285714288,
+        "latency_ms": 42.55590000002485,
+        "retrieved": [
+          "lgpd-art-9",
+          "lgpd-art-7",
+          "lgpd-art-8",
+          "lgpd-art-18",
+          "lgpd-art-8"
+        ]
+      },
+      {
+        "id": "q07",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.39285714285714285,
+        "latency_ms": 46.95699399985642,
+        "retrieved": [
+          "lgpd-art-6",
+          "lgpd-art-6",
+          "lgpd-art-50",
+          "lgpd-art-46",
+          "lgpd-art-9"
+        ]
+      },
+      {
+        "id": "q08",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.08823529411764705,
+        "latency_ms": 46.788071000037235,
+        "retrieved": [
+          "lgpd-art-9",
+          "lgpd-art-18",
+          "lgpd-art-7",
+          "lgpd-art-11",
+          "lgpd-art-9"
+        ]
+      },
+      {
+        "id": "q09",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5777777777777778,
+        "latency_ms": 47.30296000002454,
+        "retrieved": [
+          "lgpd-art-8",
+          "lgpd-art-42",
+          "cdc-art-38",
+          "lgpd-art-18",
+          "lgpd-art-9"
+        ]
+      },
+      {
+        "id": "q10",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.30434782608695654,
+        "latency_ms": 46.52077800005827,
+        "retrieved": [
+          "lgpd-art-10",
+          "lgpd-art-37",
+          "lgpd-art-10",
+          "lgpd-art-42",
+          "lgpd-art-11"
+        ]
+      },
+      {
+        "id": "q11",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.032786885245901634,
+        "latency_ms": 43.36422999995193,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-14",
+          "lgpd-art-8",
+          "lgpd-art-8"
+        ]
+      },
+      {
+        "id": "q12",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.40909090909090906,
+        "latency_ms": 43.92647399981797,
+        "retrieved": [
+          "lgpd-art-14",
+          "lgpd-art-11",
+          "lgpd-art-5",
+          "lgpd-art-13",
+          "lgpd-art-7"
+        ]
+      },
+      {
+        "id": "q13",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.28571428571428575,
+        "latency_ms": 44.37499200003003,
+        "retrieved": [
+          "lgpd-art-18",
+          "lgpd-art-18",
+          "lgpd-art-18",
+          "lgpd-art-5",
+          "lgpd-art-16"
+        ]
+      },
+      {
+        "id": "q14",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.37837837837837834,
+        "latency_ms": 42.81336300005023,
+        "retrieved": [
+          "lgpd-art-20",
+          "lgpd-art-20",
+          "lgpd-art-9",
+          "lgpd-art-8",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q15",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.38095238095238093,
+        "latency_ms": 43.150754999942365,
+        "retrieved": [
+          "lgpd-art-33",
+          "lgpd-art-5",
+          "lgpd-art-32",
+          "lgpd-art-5",
+          "lgpd-art-4"
+        ]
+      },
+      {
+        "id": "q16",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.37647058823529417,
+        "latency_ms": 44.78199000004679,
+        "retrieved": [
+          "lgpd-art-46",
+          "lgpd-art-47",
+          "lgpd-art-53",
+          "lgpd-art-43",
+          "lgpd-art-10"
+        ]
+      },
+      {
+        "id": "q17",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3157894736842105,
+        "latency_ms": 46.85605400004533,
+        "retrieved": [
+          "lgpd-art-48",
+          "lgpd-art-48",
+          "lgpd-art-5",
+          "lgpd-art-44",
+          "lgpd-art-7"
+        ]
+      },
+      {
+        "id": "q18",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3513513513513513,
+        "latency_ms": 47.722164000106204,
+        "retrieved": [
+          "lgpd-art-52",
+          "lgpd-art-52",
+          "lgpd-art-53",
+          "cdc-art-77",
+          "lgpd-art-52"
+        ]
+      },
+      {
+        "id": "q19",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.22727272727272727,
+        "latency_ms": 47.94309600015367,
+        "retrieved": [
+          "mci-art-3",
+          "mci-art-8",
+          "mci-art-7",
+          "mci-art-24",
+          "mci-art-9"
+        ]
+      },
+      {
+        "id": "q20",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.31578947368421056,
+        "latency_ms": 48.53214800004935,
+        "retrieved": [
+          "mci-art-7",
+          "mci-art-20",
+          "mci-art-10",
+          "mci-art-15",
+          "mci-art-8"
+        ]
+      },
+      {
+        "id": "q21",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.43750000000000006,
+        "latency_ms": 53.08885500016913,
+        "retrieved": [
+          "mci-art-9",
+          "mci-art-9",
+          "mci-art-5",
+          "mci-art-24",
+          "mci-art-9"
+        ]
+      },
+      {
+        "id": "q22",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.21686746987951808,
+        "latency_ms": 59.045835000006264,
+        "retrieved": [
+          "mci-art-10",
+          "mci-art-13",
+          "mci-art-15",
+          "mci-art-13",
+          "mci-art-22"
+        ]
+      },
+      {
+        "id": "q23",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.2692307692307693,
+        "latency_ms": 58.48356799992871,
+        "retrieved": [
+          "mci-art-14",
+          "mci-art-13",
+          "mci-art-7",
+          "mci-art-15",
+          "mci-art-11"
+        ]
+      },
+      {
+        "id": "q24",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.5,
+        "latency_ms": 59.979915999974764,
+        "retrieved": [
+          "mci-art-14",
+          "mci-art-16",
+          "mci-art-15",
+          "mci-art-10",
+          "mci-art-15"
+        ]
+      },
+      {
+        "id": "q25",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2830188679245283,
+        "latency_ms": 72.706172999915,
+        "retrieved": [
+          "mci-art-19",
+          "mci-art-31",
+          "mci-art-18",
+          "mci-art-20",
+          "mci-art-21"
+        ]
+      },
+      {
+        "id": "q26",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.21238938053097345,
+        "latency_ms": 59.97552300004827,
+        "retrieved": [
+          "mci-art-11",
+          "mci-art-8",
+          "mci-art-18",
+          "mci-art-19",
+          "mci-art-21"
+        ]
+      },
+      {
+        "id": "q27",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "rank": 5,
+        "faithfulness": 0.75,
+        "relevancy": 0.30303030303030304,
+        "latency_ms": 53.10315899987472,
+        "retrieved": [
+          "cdc-art-38",
+          "cdc-art-75",
+          "cdc-art-5",
+          "cdc-art-1",
+          "cdc-art-2"
+        ]
+      },
+      {
+        "id": "q28",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.0,
+        "latency_ms": 55.99401300014506,
+        "retrieved": [
+          "cdc-art-51",
+          "cdc-art-34",
+          "cdc-art-19",
+          "cdc-art-24",
+          "cdc-art-51"
+        ]
+      },
+      {
+        "id": "q29",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3529411764705882,
+        "latency_ms": 59.405912000102035,
+        "retrieved": [
+          "cdc-art-6",
+          "cdc-art-6",
+          "cdc-art-31",
+          "cdc-art-74",
+          "cdc-art-52"
+        ]
+      },
+      {
+        "id": "q30",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3870967741935484,
+        "latency_ms": 58.07276399991679,
+        "retrieved": [
+          "cdc-art-12",
+          "cdc-art-14",
+          "cdc-art-12",
+          "cdc-art-21",
+          "cdc-art-13"
+        ]
+      },
+      {
+        "id": "q31",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.06349206349206349,
+        "latency_ms": 57.33012900009271,
+        "retrieved": [
+          "cdc-art-18",
+          "cdc-art-26",
+          "cdc-art-18",
+          "cdc-art-17",
+          "cdc-art-41"
+        ]
+      },
+      {
+        "id": "q32",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3181818181818182,
+        "latency_ms": 60.565963000044576,
+        "retrieved": [
+          "cdc-art-26",
+          "cdc-art-26",
+          "lgpd-art-18",
+          "cdc-art-18",
+          "cdc-art-51"
+        ]
+      },
+      {
+        "id": "q33",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.09836065573770492,
+        "latency_ms": 58.64441100015938,
+        "retrieved": [
+          "cdc-art-60",
+          "cdc-art-37",
+          "cdc-art-67",
+          "cdc-art-37",
+          "cdc-art-6"
+        ]
+      },
+      {
+        "id": "q34",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2068965517241379,
+        "latency_ms": 59.000850999836985,
+        "retrieved": [
+          "cdc-art-39",
+          "cdc-art-53",
+          "cdc-art-19",
+          "cdc-art-35",
+          "cdc-art-18"
+        ]
+      },
+      {
+        "id": "q35",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.42424242424242425,
+        "latency_ms": 58.63796099993124,
+        "retrieved": [
+          "cdc-art-42",
+          "cdc-art-51",
+          "cdc-art-41",
+          "cdc-art-18",
+          "lgpd-art-42"
+        ]
+      },
+      {
+        "id": "q36",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.1839080459770115,
+        "latency_ms": 59.67521999991732,
+        "retrieved": [
+          "cdc-art-49",
+          "cdc-art-18",
+          "cdc-art-43",
+          "clt-art-71",
+          "cdc-art-53"
+        ]
+      },
+      {
+        "id": "q37",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.09090909090909091,
+        "latency_ms": 62.14522000004763,
+        "retrieved": [
+          "cf-art-5",
+          "cf-art-6",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q38",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.43749999999999994,
+        "latency_ms": 62.102239999831,
+        "retrieved": [
+          "cf-art-5",
+          "mci-art-10",
+          "cf-art-5",
+          "cf-art-6",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q39",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.06451612903225806,
+        "latency_ms": 58.41641400002118,
+        "retrieved": [
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q40",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.43636363636363634,
+        "latency_ms": 59.372394000092754,
+        "retrieved": [
+          "cf-art-6",
+          "cf-art-5",
+          "cdc-art-113",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q41",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.326530612244898,
+        "latency_ms": 62.331600000106846,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q42",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5306122448979591,
+        "latency_ms": 58.576626999865766,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "clt-art-59",
+          "clt-art-71",
+          "clt-art-58"
+        ]
+      },
+      {
+        "id": "q43",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.47058823529411764,
+        "latency_ms": 58.493806000115,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-6"
+        ]
+      },
+      {
+        "id": "q44",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.7692307692307693,
+        "latency_ms": 56.94033299982948,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q45",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.43750000000000006,
+        "latency_ms": 58.11786200001734,
+        "retrieved": [
+          "clt-art-129",
+          "clt-art-477",
+          "clt-art-3",
+          "clt-art-442",
+          "clt-art-130"
+        ]
+      },
+      {
+        "id": "q46",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.39285714285714285,
+        "latency_ms": 56.0652100000425,
+        "retrieved": [
+          "clt-art-58",
+          "cf-art-7",
+          "clt-art-59",
+          "clt-art-71",
+          "clt-art-59"
+        ]
+      },
+      {
+        "id": "q47",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2469135802469136,
+        "latency_ms": 62.034018000076685,
+        "retrieved": [
+          "clt-art-59",
+          "clt-art-71",
+          "clt-art-71",
+          "clt-art-130",
+          "clt-art-442"
+        ]
+      },
+      {
+        "id": "q48",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.14492753623188406,
+        "latency_ms": 61.28641599980256,
+        "retrieved": [
+          "clt-art-71",
+          "clt-art-71",
+          "clt-art-58",
+          "clt-art-59",
+          "clt-art-59"
+        ]
+      },
+      {
+        "id": "q49",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.37837837837837834,
+        "latency_ms": 58.659789000103046,
+        "retrieved": [
+          "clt-art-482",
+          "clt-art-482",
+          "clt-art-71",
+          "clt-art-442",
+          "clt-art-130"
+        ]
+      },
+      {
+        "id": "q50",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.043478260869565216,
+        "latency_ms": 62.63487399996848,
+        "retrieved": [
+          "clt-art-487",
+          "clt-art-487",
+          "clt-art-59",
+          "clt-art-473",
+          "clt-art-71"
+        ]
+      }
+    ],
+    "hybrid_rerank": [
+      {
+        "id": "q01",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2857142857142857,
+        "latency_ms": 61.087554000096134,
+        "retrieved": [
+          "lgpd-art-1",
+          "lgpd-art-23",
+          "lgpd-art-12",
+          "lgpd-art-14",
+          "lgpd-art-7"
+        ]
+      },
+      {
+        "id": "q02",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2222222222222222,
+        "latency_ms": 59.76950100011891,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-20",
+          "lgpd-art-5",
+          "lgpd-art-5"
+        ]
+      },
+      {
+        "id": "q03",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5671641791044776,
+        "latency_ms": 59.94827900008204,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-20",
+          "lgpd-art-5"
+        ]
+      },
+      {
+        "id": "q04",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.38297872340425526,
+        "latency_ms": 58.77988399993228,
+        "retrieved": [
+          "lgpd-art-39",
+          "lgpd-art-5",
+          "lgpd-art-35",
+          "lgpd-art-41",
+          "lgpd-art-5"
+        ]
+      },
+      {
+        "id": "q05",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.4,
+        "latency_ms": 55.533612000090216,
+        "retrieved": [
+          "lgpd-art-41",
+          "lgpd-art-5",
+          "lgpd-art-41",
+          "lgpd-art-35",
+          "lgpd-art-40"
+        ]
+      },
+      {
+        "id": "q06",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.14285714285714288,
+        "latency_ms": 56.830859999990935,
+        "retrieved": [
+          "lgpd-art-9",
+          "lgpd-art-7",
+          "lgpd-art-8",
+          "lgpd-art-14",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q07",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.44000000000000006,
+        "latency_ms": 62.5437010000951,
+        "retrieved": [
+          "lgpd-art-6",
+          "lgpd-art-6",
+          "lgpd-art-9",
+          "lgpd-art-6",
+          "lgpd-art-6"
+        ]
+      },
+      {
+        "id": "q08",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.13793103448275862,
+        "latency_ms": 60.704501999907734,
+        "retrieved": [
+          "lgpd-art-9",
+          "lgpd-art-9",
+          "lgpd-art-7",
+          "lgpd-art-8",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q09",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5777777777777778,
+        "latency_ms": 67.28759999987233,
+        "retrieved": [
+          "lgpd-art-8",
+          "cdc-art-38",
+          "lgpd-art-5",
+          "lgpd-art-42",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q10",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.23728813559322035,
+        "latency_ms": 71.61965900013456,
+        "retrieved": [
+          "lgpd-art-10",
+          "lgpd-art-37",
+          "lgpd-art-10",
+          "lgpd-art-44",
+          "lgpd-art-9"
+        ]
+      },
+      {
+        "id": "q11",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.032786885245901634,
+        "latency_ms": 73.36521599995649,
+        "retrieved": [
+          "lgpd-art-5",
+          "lgpd-art-5",
+          "lgpd-art-14",
+          "lgpd-art-14",
+          "lgpd-art-5"
+        ]
+      },
+      {
+        "id": "q12",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.10256410256410257,
+        "latency_ms": 66.64827099984905,
+        "retrieved": [
+          "lgpd-art-14",
+          "lgpd-art-11",
+          "lgpd-art-7",
+          "lgpd-art-5",
+          "lgpd-art-5"
+        ]
+      },
+      {
+        "id": "q13",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3157894736842105,
+        "latency_ms": 60.212872999954925,
+        "retrieved": [
+          "lgpd-art-18",
+          "lgpd-art-11",
+          "lgpd-art-18",
+          "lgpd-art-40",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q14",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3500000000000001,
+        "latency_ms": 60.51536700010729,
+        "retrieved": [
+          "lgpd-art-20",
+          "lgpd-art-20",
+          "lgpd-art-44",
+          "lgpd-art-18",
+          "lgpd-art-35"
+        ]
+      },
+      {
+        "id": "q15",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.38095238095238093,
+        "latency_ms": 69.16874700004882,
+        "retrieved": [
+          "lgpd-art-33",
+          "lgpd-art-5",
+          "lgpd-art-32",
+          "lgpd-art-5",
+          "lgpd-art-4"
+        ]
+      },
+      {
+        "id": "q16",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.4444444444444445,
+        "latency_ms": 66.01370999987921,
+        "retrieved": [
+          "lgpd-art-46",
+          "lgpd-art-44",
+          "lgpd-art-42",
+          "lgpd-art-49",
+          "lgpd-art-47"
+        ]
+      },
+      {
+        "id": "q17",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3157894736842105,
+        "latency_ms": 63.153046000024915,
+        "retrieved": [
+          "lgpd-art-48",
+          "lgpd-art-48",
+          "lgpd-art-44",
+          "lgpd-art-5",
+          "lgpd-art-14"
+        ]
+      },
+      {
+        "id": "q18",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3513513513513513,
+        "latency_ms": 60.7637349999095,
+        "retrieved": [
+          "lgpd-art-52",
+          "lgpd-art-52",
+          "lgpd-art-53",
+          "lgpd-art-52",
+          "lgpd-art-52"
+        ]
+      },
+      {
+        "id": "q19",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.2222222222222222,
+        "latency_ms": 63.965253000105804,
+        "retrieved": [
+          "mci-art-8",
+          "mci-art-3",
+          "mci-art-12",
+          "mci-art-24",
+          "mci-art-2"
+        ]
+      },
+      {
+        "id": "q20",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.31578947368421056,
+        "latency_ms": 85.26391099985631,
+        "retrieved": [
+          "mci-art-7",
+          "mci-art-10",
+          "mci-art-20",
+          "mci-art-19",
+          "mci-art-10"
+        ]
+      },
+      {
+        "id": "q21",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.43750000000000006,
+        "latency_ms": 81.01698199993734,
+        "retrieved": [
+          "mci-art-9",
+          "mci-art-9",
+          "mci-art-5",
+          "mci-art-9",
+          "mci-art-28"
+        ]
+      },
+      {
+        "id": "q22",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.18750000000000003,
+        "latency_ms": 79.59589400002187,
+        "retrieved": [
+          "mci-art-10",
+          "mci-art-20",
+          "mci-art-19",
+          "mci-art-15",
+          "mci-art-7"
+        ]
+      },
+      {
+        "id": "q23",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.03278688524590164,
+        "latency_ms": 159.932943000058,
+        "retrieved": [
+          "mci-art-14",
+          "mci-art-15",
+          "mci-art-11",
+          "mci-art-17",
+          "mci-art-25"
+        ]
+      },
+      {
+        "id": "q24",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.3333333333333333,
+        "rank": 3,
+        "faithfulness": 0.75,
+        "relevancy": 0.5,
+        "latency_ms": 63.85291599985976,
+        "retrieved": [
+          "mci-art-16",
+          "mci-art-22",
+          "mci-art-15",
+          "mci-art-14",
+          "mci-art-13"
+        ]
+      },
+      {
+        "id": "q25",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2830188679245283,
+        "latency_ms": 57.5321520000216,
+        "retrieved": [
+          "mci-art-19",
+          "mci-art-31",
+          "mci-art-19",
+          "mci-art-21",
+          "mci-art-19"
+        ]
+      },
+      {
+        "id": "q26",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.21238938053097345,
+        "latency_ms": 51.84862600003726,
+        "retrieved": [
+          "mci-art-11",
+          "mci-art-8",
+          "mci-art-19",
+          "mci-art-21",
+          "mci-art-15"
+        ]
+      },
+      {
+        "id": "q27",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.0,
+        "latency_ms": 52.74071000008007,
+        "retrieved": [
+          "cdc-art-1",
+          "cdc-art-105",
+          "cdc-art-106",
+          "cdc-art-5",
+          "cdc-art-51"
+        ]
+      },
+      {
+        "id": "q28",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.10869565217391305,
+        "latency_ms": 51.49006199985706,
+        "retrieved": [
+          "cdc-art-6",
+          "cdc-art-75",
+          "cdc-art-51",
+          "cdc-art-51",
+          "cdc-art-19"
+        ]
+      },
+      {
+        "id": "q29",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3037974683544304,
+        "latency_ms": 46.61444900011702,
+        "retrieved": [
+          "cdc-art-6",
+          "cdc-art-37",
+          "cdc-art-31",
+          "cdc-art-14",
+          "cdc-art-74"
+        ]
+      },
+      {
+        "id": "q30",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3870967741935484,
+        "latency_ms": 45.366117999947164,
+        "retrieved": [
+          "cdc-art-12",
+          "cdc-art-14",
+          "cdc-art-12",
+          "cdc-art-11",
+          "cdc-art-17"
+        ]
+      },
+      {
+        "id": "q31",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.11904761904761904,
+        "latency_ms": 48.990353000135656,
+        "retrieved": [
+          "cdc-art-18",
+          "cdc-art-104",
+          "cdc-art-26",
+          "cdc-art-19",
+          "cdc-art-49"
+        ]
+      },
+      {
+        "id": "q32",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.3181818181818182,
+        "latency_ms": 45.93085000010433,
+        "retrieved": [
+          "cdc-art-26",
+          "cdc-art-26",
+          "cdc-art-18",
+          "mci-art-26",
+          "cdc-art-51"
+        ]
+      },
+      {
+        "id": "q33",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.18421052631578946,
+        "latency_ms": 43.80252099986137,
+        "retrieved": [
+          "cdc-art-1",
+          "cdc-art-37",
+          "cdc-art-105",
+          "cdc-art-37",
+          "mci-art-7"
+        ]
+      },
+      {
+        "id": "q34",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "rank": 2,
+        "faithfulness": 0.75,
+        "relevancy": 0.13793103448275862,
+        "latency_ms": 44.912593000162815,
+        "retrieved": [
+          "cdc-art-53",
+          "cdc-art-39",
+          "cdc-art-102",
+          "cdc-art-33",
+          "cdc-art-19"
+        ]
+      },
+      {
+        "id": "q35",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.42424242424242425,
+        "latency_ms": 49.07220900008724,
+        "retrieved": [
+          "cdc-art-42",
+          "cdc-art-51",
+          "lgpd-art-42",
+          "cdc-art-18",
+          "cdc-art-41"
+        ]
+      },
+      {
+        "id": "q36",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.19753086419753085,
+        "latency_ms": 46.12624100013818,
+        "retrieved": [
+          "cdc-art-49",
+          "cdc-art-53",
+          "cdc-art-56",
+          "cdc-art-43",
+          "cdc-art-18"
+        ]
+      },
+      {
+        "id": "q37",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.09375,
+        "latency_ms": 49.23388899987913,
+        "retrieved": [
+          "cf-art-5",
+          "lgpd-art-23",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q38",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.5090909090909091,
+        "latency_ms": 48.73005100012051,
+        "retrieved": [
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q39",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.06451612903225806,
+        "latency_ms": 47.30659500000911,
+        "retrieved": [
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q40",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.34285714285714286,
+        "latency_ms": 45.52176800007146,
+        "retrieved": [
+          "cf-art-6",
+          "lgpd-art-18",
+          "cf-art-5",
+          "lgpd-art-7",
+          "cf-art-5"
+        ]
+      },
+      {
+        "id": "q41",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.25000000000000006,
+        "latency_ms": 43.1591720000597,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "lgpd-art-18"
+        ]
+      },
+      {
+        "id": "q42",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.52,
+        "latency_ms": 42.6065199999357,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7"
+        ]
+      },
+      {
+        "id": "q43",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.47058823529411764,
+        "latency_ms": 44.61489599998458,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7"
+        ]
+      },
+      {
+        "id": "q44",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.7692307692307693,
+        "latency_ms": 47.067467999795554,
+        "retrieved": [
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7",
+          "cf-art-7"
+        ]
+      },
+      {
+        "id": "q45",
+        "hit": 0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "rank": null,
+        "faithfulness": 0.75,
+        "relevancy": 0.043478260869565216,
+        "latency_ms": 45.88331200011453,
+        "retrieved": [
+          "cdc-art-38",
+          "clt-art-134",
+          "clt-art-473",
+          "clt-art-129",
+          "clt-art-482"
+        ]
+      },
+      {
+        "id": "q46",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.39285714285714285,
+        "latency_ms": 47.212700000045515,
+        "retrieved": [
+          "clt-art-58",
+          "cf-art-7",
+          "clt-art-59",
+          "clt-art-59",
+          "clt-art-71"
+        ]
+      },
+      {
+        "id": "q47",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2469135802469136,
+        "latency_ms": 43.57215200002429,
+        "retrieved": [
+          "clt-art-59",
+          "clt-art-71",
+          "clt-art-71",
+          "lgpd-art-13",
+          "cf-art-7"
+        ]
+      },
+      {
+        "id": "q48",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.14492753623188406,
+        "latency_ms": 46.23928699993485,
+        "retrieved": [
+          "clt-art-71",
+          "clt-art-71",
+          "clt-art-482",
+          "clt-art-58",
+          "clt-art-477"
+        ]
+      },
+      {
+        "id": "q49",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.2545454545454545,
+        "latency_ms": 42.329614999971454,
+        "retrieved": [
+          "clt-art-482",
+          "clt-art-482",
+          "clt-art-71",
+          "cf-art-7",
+          "cdc-art-39"
+        ]
+      },
+      {
+        "id": "q50",
+        "hit": 1,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "rank": 1,
+        "faithfulness": 0.75,
+        "relevancy": 0.043478260869565216,
+        "latency_ms": 43.00152199994045,
+        "retrieved": [
+          "clt-art-487",
+          "clt-art-487",
+          "clt-art-71",
+          "clt-art-71",
+          "clt-art-482"
+        ]
+      }
+    ]
+  },
+  "cost": {
+    "billed": null,
+    "currency": null,
+    "reason": "Execução com embeddings locais e LLM mock, extrativo. Nenhuma chamada paga foi feita. prompt_chars e completion_chars medem o prompt que seria enviado e o texto da resposta.",
+    "prompt_chars_total": 459045,
+    "completion_chars_total": 92770
+  }
+}

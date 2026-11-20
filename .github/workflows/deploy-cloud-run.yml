@@ -1,0 +1,34 @@
+name: Deploy Cloud Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      - uses: google-github-actions/setup-gcloud@v2
+      - name: Publicar no Cloud Run
+        env:
+          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+          GCP_REGION: ${{ vars.GCP_REGION }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+        run: |
+          set -euo pipefail
+          REGION="${GCP_REGION:-southamerica-east1}"
+          PROVIDER="${LLM_PROVIDER:-mock}"
+          gcloud run deploy rag-avaliado \
+            --source . \
+            --project "$GCP_PROJECT" \
+            --region "$REGION" \
+            --platform managed \
+            --port 8080 \
+            --memory 1Gi \
+            --cpu 1 \
+            --allow-unauthenticated \
+            --set-env-vars "LLM_PROVIDER=${PROVIDER},EMBEDDING_PROVIDER=local,AUTO_MIGRATE=true" \
+            --set-secrets "DATABASE_URL=rag-database-url:latest"
